@@ -532,7 +532,7 @@ export default function App() {
               <div className="relative rounded-3xl overflow-hidden bg-[#13131A] border border-[#2B2B3A] p-4 sm:p-5 shadow-2xl group">
                 <div className="relative w-full h-[480px] sm:h-[540px] rounded-2xl overflow-hidden bg-[#0A0A0E] border border-[#22222E]">
                   <img
-                    src="WhatsApp Image 2026-11-02 at 19.52.19.jpeg"
+                    src="/founder.jpeg"
                     alt="Rajat Raghavendra Munavalli - Founder & Creative Director, Vaada Productions"
                     loading="eager"
                     className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.04] group-hover:scale-105 transition-all duration-700 block"
