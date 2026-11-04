@@ -901,27 +901,6 @@ export default function App() {
             })}
           </div>
 
-          {/* Quick FAQ / Clarification banner */}
-          <div className="mt-16 max-w-4xl mx-auto p-6 rounded-2xl bg-[#0F0F16] border border-[#1F1F2B] flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E89A3C]/10 border border-[#E89A3C]/30 flex items-center justify-center shrink-0">
-                <Info className="w-5 h-5 text-[#E89A3C]" />
-              </div>
-              <div className="text-xs text-[#9E9EA8]">
-                <strong className="text-white block">Need custom scope or a dedicated Demo Day sprint?</strong>
-                We provide tailored multi-camera packages for tech conferences, hackathons, and product drops.
-              </div>
-            </div>
-            <button
-              onClick={() => {
-                setBookingForm((prev) => ({ ...prev, selectedPkg: "Custom Event / Milestone" }));
-                setShowBookingModal(true);
-              }}
-              className="px-5 py-2.5 rounded-lg bg-[#181824] hover:bg-[#222230] text-xs font-semibold text-white whitespace-nowrap border border-[#2D2D3E] transition-all"
-            >
-              Discuss Custom Scope
-            </button>
-          </div>
 
         </div>
       </section>
