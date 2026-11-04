@@ -177,6 +177,33 @@ const BTS_GALLERY = [
     caption: "Harnessing steam velocity and focused rim lighting to evoke pure sensory impact.",
     aspect: "tall",
     image: "/bts/steam-wand.jpeg"
+  },
+  {
+    id: "bts-7",
+    title: "Beverage Styling & Hero Framing",
+    location: "Cafe Counter Set",
+    tag: "Beverage Hero Shot",
+    caption: "Styled pours and fine detail, lit to make every drink look irresistible on camera.",
+    aspect: "tall",
+    image: "/bts/beverage-hero.jpeg"
+  },
+  {
+    id: "bts-8",
+    title: "Burger Build & Texture Close-Up",
+    location: "Restaurant Kitchen Set",
+    tag: "Food Styling & Macro",
+    caption: "Layered textures and melt detail under soft directional light for scroll-stopping food reels.",
+    aspect: "tall",
+    image: "/bts/burger-build.jpeg"
+  },
+  {
+    id: "bts-9",
+    title: "Plated Dish Hero Frame",
+    location: "Hospitality Table Set",
+    tag: "Plating & Composition",
+    caption: "Clean plating and composition for menu launches and hospitality brand content.",
+    aspect: "tall",
+    image: "/bts/plated-dish.jpeg"
   }
 ];
 
@@ -670,7 +697,7 @@ export default function App() {
                     src={bts.image}
                     alt={bts.title}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100 block"
+                    className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-500 opacity-90 group-hover:opacity-100 block"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = `./${bts.image}`;
