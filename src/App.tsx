@@ -207,13 +207,13 @@ const PACKAGES = [
     priceDisplay: "Demand Based",
     pricePeriod: "custom quote",
     pricingNote: "Tailored to event scale & launch complexity",
-    idealFor: "Hardware reveals, major software releases, startup event keynotes, demo days, and venture roadshows.",
+    idealFor: "Special product launches, exclusive drops, experiential pop-ups, and live brand events that require end-to-end coverage.",
     features: [
-      "Cinematic Launch Showcase Film (4K, 16:9 & 9:16)",
-      "Dedicated On-Site Event / Product Filming Rig",
-      "Macro Detailing, Fluid Orbitals & Industrial B-Roll",
-      "Impact Sound Design, Custom Risers & Bespoke SFX",
-      "Multi-Platform Social Teasers & Ad Variant Cuts"
+      "Launch Showcase Reel (4K, 16:9 or 9:16)",
+      "Dedicated On-Site Event & Product Filming",
+      "Macro Detailing, Product Textures & Dynamic B-Roll",
+      "Event/Product Theme-Based Editing",
+      "First-3-Second Thumb-Stop Hook"
     ]
   },
   {
