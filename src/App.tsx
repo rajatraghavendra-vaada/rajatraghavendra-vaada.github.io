@@ -597,11 +597,11 @@ export default function App() {
               </p>
 
               <p className="text-sm sm:text-base text-[#A1A1AA] leading-relaxed">
-                That obsessive discipline was captured in my published chapter, <strong className="text-[#E89A3C]">‘A Platter with My Signature’</strong> (featured in <em>Growth Mindset: It's All You Need to Succeed</em>)—documenting how high standards and relentless self-reinvention shape enduring craft.
+                That obsessive discipline was captured in my published chapter, <strong className="text-[#E89A3C]">‘A Platter with My Signature’</strong> (featured in <em>Growth Mindset: It’s All You Need to Succeed</em>) documenting how high standards and relentless self-reinvention shape enduring craft.
               </p>
 
               <p className="text-sm sm:text-base text-[#A1A1AA] leading-relaxed">
-                At the same time, holding leadership as a <strong className="text-white">BBA leader and HOD at NMIMS Bangalore</strong> gave me the commercial backbone founders crave. I don’t look at videos as pretty portfolio clips; I see them through the lens of brand positioning, retention hooks, and founder conviction.
+                Paired with a formal background in <strong className="text-white">business administration</strong>, that operational rigor forms the commercial backbone founders look for. I don’t approach video as just aesthetic portfolio pieces I build visual assets through the lens of brand positioning, audience retention, and founder conviction.
               </p>
 
               {/* The Rig & Mindset Highlights */}
