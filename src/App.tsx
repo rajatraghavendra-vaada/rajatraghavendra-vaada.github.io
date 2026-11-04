@@ -593,7 +593,7 @@ export default function App() {
               </h2>
 
               <p className="text-sm sm:text-base text-[#A1A1AA] leading-relaxed">
-                Before picking up the camera rig, my crucible was the kitchen. As an artisanal baker, founder of luxury brand <strong className="text-white">Vaada</strong>, a <strong className="text-white">MasterChef India contestant</strong>, and <strong className="text-white">Runner-up in Odisha Top Chef</strong>, I learned that excellence is never accidental. In high-end pastry, a two-degree shift in chocolate tempering or three grams of fat alters the entire outcome.
+                Before picking up the camera rig, my crucible was the kitchen. As an artisanal baker, founder of <strong className="text-white">Vaada Bakes</strong>, a <strong className="text-white">MasterChef India contestant</strong>, and <strong className="text-white">Runner-up in Odisha Top Chef</strong>, I learned that excellence is never accidental. In high-end pastry, a two-degree shift in chocolate tempering or three grams of fat alters the entire outcome.
               </p>
 
               <p className="text-sm sm:text-base text-[#A1A1AA] leading-relaxed">
