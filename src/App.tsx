@@ -190,12 +190,12 @@ const PACKAGES = [
     priceDisplay: "₹50,000",
     pricePeriod: "/ month",
     pricingNote: "4 High-Impact Vertical Reels / Month",
-    idealFor: "Early-stage founders building organic personal authority, Twitter/LinkedIn brand presence, and talent pull.",
+    idealFor: "Cafes, specialty bakehouses, and hospitality spots looking for high-impact, short-format content to establish an undeniable local brand presence and drive footfall.",
     features: [
-      "4x Bespoke High-Retention Reels per month",
-      "Direct Founder Narrative Coaching & Script Ideation",
+      "4x High-Retention Reels per month",
+      "Concept Direction & End-to-End Script Ideation",
       "Dynamic 3-Axis Gimbal Kinetic Movement & Framing",
-      "Custom Kinetic Captions, Sound Design & Color Grade",
+      "Custom Kinetic Captions, Sound Design & Editing",
       "Engineered First-3-Second Thumb-Stop Hooks"
     ]
   },
@@ -828,8 +828,12 @@ export default function App() {
               const isSelected = activePackage.id === pkg.id;
               return (
                 <div
-                  key={pkg.id}
-                  className={`rounded-2xl p-7 transition-all flex flex-col justify-between relative ${
+            key={pkg.id}
+            onClick={() => {
+              setActivePackage(pkg);
+              setBookingForm((prev) => ({ ...prev, selectedPkg: `${pkg.name} (${pkg.priceDisplay})` }));
+            }}
+            className={`cursor-pointer rounded-2xl p-7 transition-all flex flex-col justify-between relative ${
                     isSelected
                       ? "bg-[#14141E] border-2 border-[#E89A3C] shadow-2xl shadow-[#E89A3C]/15"
                       : "bg-[#0E0E14] border border-[#20202A] hover:border-[#2D2D3B]"
