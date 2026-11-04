@@ -224,13 +224,13 @@ const PACKAGES = [
     priceDisplay: "₹1,20,000",
     pricePeriod: "/ month",
     pricingNote: "2 Reels Weekly (8-10 Reels/Mo) + Carousels",
-    idealFor: "Scaling venture-backed startups and growth brands that need an omnipresent, cohesive visual engine without an in-house media team.",
+    idealFor: "Cafes, restaurants, and hospitality brands looking for consistent, end-to-end social media content management without the overhead of hiring an in-house media team.",
     features: [
       "8 to 10 High-Production Reels per month (2 weekly drops)",
       "Coordinated High-Value Carousel Designs & Slide Creatives",
       "End-to-End Content Strategy, Topic Research & Scripts",
-      "Dedicated Monthly Filming Sessions in Bengaluru",
-      "Complete Asset Vault: Master Reels, Carousels & Raw Clips"
+      "Dedicated Monthly Shooting Sessions",
+      "Uncut Raw Photo Access: full set of raw pictures provided for your flexible, everyday use"
     ]
   }
 ];
