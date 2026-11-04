@@ -274,11 +274,13 @@ export default function App() {
     founderName: "",
     companyName: "",
     email: "",
-    selectedPkg: "Founder Brand Sprint (₹50k/mo)",
+    selectedPkg: "Founder Brand Sprint (₹50,000)",
     location: "Bengaluru (In-Person)",
     brief: ""
   });
   const [bookingSubmitted, setBookingSubmitted] = useState(false);
+  const [bookingSending, setBookingSending] = useState(false);
+  const [bookingError, setBookingError] = useState("");
 
   // Filtered portfolio
   const filteredPortfolio = useMemo(() => {
@@ -286,9 +288,33 @@ export default function App() {
     return PORTFOLIO_ITEMS.filter((item) => item.category === activeCategory);
   }, [activeCategory]);
 
-  const handleBookingSubmit = (e) => {
+  const handleBookingSubmit = async (e) => {
     e.preventDefault();
-    setBookingSubmitted(true);
+    setBookingError("");
+    setBookingSending(true);
+    try {
+      const res = await fetch("https://formspree.io/f/xeaavzrb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          founderName: bookingForm.founderName,
+          companyName: bookingForm.companyName,
+          email: bookingForm.email,
+          selectedPackage: bookingForm.selectedPkg,
+          location: bookingForm.location,
+          brief: bookingForm.brief,
+        }),
+      });
+      if (res.ok) {
+        setBookingSubmitted(true);
+      } else {
+        setBookingError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch (err) {
+      setBookingError("Network error. Please check your connection and try again.");
+    } finally {
+      setBookingSending(false);
+    }
   };
 
   return (
@@ -1159,6 +1185,7 @@ export default function App() {
                 onClick={() => {
                   setShowBookingModal(false);
                   setBookingSubmitted(false);
+                  setBookingError("");
                 }}
                 className="p-1.5 rounded-lg text-[#888894] hover:text-white hover:bg-[#1C1C24]"
               >
@@ -1179,6 +1206,7 @@ export default function App() {
                   onClick={() => {
                     setShowBookingModal(false);
                     setBookingSubmitted(false);
+                  setBookingError("");
                   }}
                   className="mt-4 px-6 py-2.5 rounded-xl bg-[#1D1D26] hover:bg-[#252532] text-xs font-bold text-white uppercase tracking-wider"
                 >
@@ -1232,10 +1260,10 @@ export default function App() {
                     onChange={(e) => setBookingForm({ ...bookingForm, selectedPkg: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#09090D] border border-[#232330] text-white focus:outline-none focus:border-[#E89A3C]"
                   >
-                    <option>Founder Brand Sprint (4 Reels - ₹50,000 / mo)</option>
-                    <option>Product Launch Cut (Demand Based / Custom)</option>
-                    <option>Full Narrative Suite (2 Reels/wk + Carousels - ₹1,20,000 / mo)</option>
-                    <option>Custom Milestone / Event Scope</option>
+                    <option value="Founder Brand Sprint (₹50,000)">Founder Brand Sprint (4 Reels - ₹50,000 / mo)</option>
+                    <option value="Product Launch Cut (Demand Based)">Product Launch Cut (Demand Based / Custom)</option>
+                    <option value="Full Narrative Suite (₹1,20,000)">Full Narrative Suite (2 Reels/wk + Carousels - ₹1,20,000 / mo)</option>
+                    <option value="Custom Event / Milestone">Custom Milestone / Event Scope</option>
                   </select>
                 </div>
 
@@ -1271,13 +1299,17 @@ export default function App() {
                 </div>
 
                 <div className="pt-2">
-                  <button
-                    type="submit"
-                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#E89A3C] to-[#D97706] text-black font-extrabold text-xs uppercase tracking-wider hover:brightness-110 shadow-lg shadow-[#E89A3C]/20 transition-all flex items-center justify-center gap-2"
-                  >
-                    <Send className="w-3.5 h-3.5" />
-                    <span>Submit Project Inquiry</span>
-                  </button>
+                {bookingError && (
+                  <p className="mb-3 text-xs text-red-400 text-center">{bookingError}</p>
+                )}
+                <button
+                  type="submit"
+                  disabled={bookingSending}
+                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#E89A3C] to-[#D97706] text-black font-extrabold text-xs uppercase tracking-wider hover:brightness-110 shadow-lg shadow-[#E89A3C]/20 transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  <span>{bookingSending ? "Sending..." : "Submit Project Inquiry"}</span>
+                </button>
                   <p className="text-[10px] text-center text-[#5E5E6C] mt-2 font-mono">
                     Protected by the Vaada Commitment • Direct Founder Access
                   </p>
