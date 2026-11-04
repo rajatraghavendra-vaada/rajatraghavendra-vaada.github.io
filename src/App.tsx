@@ -22,10 +22,6 @@ import {
   TrendingUp,
   MapPin,
   Calendar,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Youtube,
   Info,
   BookOpen,
   ChefHat,
@@ -1017,12 +1013,6 @@ export default function App() {
             <a href="#packages" className="hover:text-white transition-colors">Pricing</a>
           </div>
 
-          <div className="flex items-center gap-4 text-[#8C8C9A]">
-            <a href="#" className="hover:text-[#E89A3C] transition-colors"><Twitter className="w-4 h-4" /></a>
-            <a href="#" className="hover:text-[#E89A3C] transition-colors"><Linkedin className="w-4 h-4" /></a>
-            <a href="#" className="hover:text-[#E89A3C] transition-colors"><Instagram className="w-4 h-4" /></a>
-            <a href="#" className="hover:text-[#E89A3C] transition-colors"><Youtube className="w-4 h-4" /></a>
-          </div>
 
         </div>
 
