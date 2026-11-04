@@ -131,7 +131,7 @@ const BTS_GALLERY = [
     tag: "Studio Softbox & Run-and-Gun",
     caption: "Capturing authentic craftsmanship under controlled diffused lighting with dynamic handheld tracking.",
     aspect: "tall",
-    image: "WhatsApp Image 2026-11-02 at 20.05.35.jpg"
+    image: "/bts/barista-workflow.jpeg"
   },
   {
     id: "bts-2",
@@ -140,7 +140,7 @@ const BTS_GALLERY = [
     tag: "Ronin Mechanical Calibration",
     caption: "Balanced for ultra-fluid, zero-micro-jitter kinetic tracking shots on outdoor terrain.",
     aspect: "wide",
-    image: "WhatsApp Image 2026-11-02 at 20.05.36.jpg"
+    image: "/bts/ronin-gimbal.jpeg"
   },
   {
     id: "bts-3",
@@ -149,7 +149,7 @@ const BTS_GALLERY = [
     tag: "Directional Mic & Fluid Head",
     caption: "Dialed-in directional audio and articulated screen monitoring for rapid on-location interviews and B-roll.",
     aspect: "tall",
-    image: "WhatsApp Image 2026-11-02 at 20.05.36 (1).jpeg"
+    image: "/bts/audio-rig.jpeg"
   },
   {
     id: "bts-4",
@@ -158,7 +158,7 @@ const BTS_GALLERY = [
     tag: "Dual Pixel Focus Check",
     caption: "Calibrating macro framing, depth of field, and composition through the flip-out articulated display.",
     aspect: "tall",
-    image: "WhatsApp Image 2026-11-02 at 20.05.36 (2).jpg"
+    image: "/bts/monitor-check.jpeg"
   },
   {
     id: "bts-5",
@@ -167,7 +167,7 @@ const BTS_GALLERY = [
     tag: "Macro Fluid Detail",
     caption: "High-speed macro capture highlighting textural crema pour, viscosity, and metallic reflection.",
     aspect: "wide",
-    image: "WhatsApp Image 2026-11-02 at 20.05.35 (1).jpg"
+    image: "/bts/crema-macro.jpeg"
   },
   {
     id: "bts-6",
@@ -176,7 +176,7 @@ const BTS_GALLERY = [
     tag: "Steam & Sensory Optics",
     caption: "Harnessing steam velocity and focused rim lighting to evoke pure sensory impact.",
     aspect: "tall",
-    image: "WhatsApp Image 2026-11-02 at 20.05.34.jpg"
+    image: "/bts/steam-wand.jpeg"
   }
 ];
 
