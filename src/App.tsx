@@ -285,6 +285,19 @@ const TEAM = [
       "From scripting and creative oversight to aligning fast-moving production teams and publishing workflows, I manage the moving parts that take an idea from raw concept to finished, high-impact content. I bring structured execution, sharp audience awareness, and an obsessive eye for detail to every brand partner we scale.",
     ],
   },
+  {
+    id: "team-3",
+    name: "Samarth Patil",
+    role: "Head of Sales",
+    badge: "HEAD OF SALES",
+    pill: "THE HEAD OF SALES",
+    headline: "Bringing high-potential brands into our creative orbit.",
+    image: "/team/head-of-sales.jpeg",
+    bio: [
+      "Great content starts long before the cameras roll, it starts with an obsession for what makes a brand tick. As Head of Sales, I bridge the gap between ambitious business goals and culture-shifting visual storytelling.",
+      "From late-afternoon cafe scouting to architecting custom content retainers, my mission is simple: bring high-potential brands into our creative orbit and build partnerships that turn passive scrollers into genuine brand believers.",
+    ],
+  },
 ];
 
 function TeamSlide({ m }) {
