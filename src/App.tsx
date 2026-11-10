@@ -212,7 +212,7 @@ const PACKAGES = [
     badge: "Founder Essential",
     priceDisplay: "₹50,000",
     pricePeriod: "/ month",
-    pricingNote: "4 High-Impact Vertical Reels / Month",
+    pricingNote: "4 High-Impact Reels / Month + 1 Carousel",
     idealFor: "Cafes, specialty bakehouses, and hospitality spots looking for high-impact, short-format content to establish an undeniable local brand presence and drive footfall.",
     features: [
       "4x High-Retention Reels per month",
