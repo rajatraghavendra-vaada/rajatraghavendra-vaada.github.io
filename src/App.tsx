@@ -618,7 +618,7 @@ export default function App() {
               </h2>
 
               <p className="text-base text-[#A1A1AA] leading-relaxed">
-                In Hindi and Sanskrit heritage, <strong className="text-white">‘Vaada’ (वादा)</strong> is not casual speech—it is a sacred commitment. Every startup enters the market making a bold promise: to early believers, angel investors, first hires, and customers.
+                In Hindi and Sanskrit heritage, <strong className="text-white">‘Vaada’ (वादा)</strong> is not casual speech: it is a sacred commitment. Every startup enters the market making a bold promise: to early believers, angel investors, first hires, and customers.
               </p>
 
               <p className="text-base text-[#A1A1AA] leading-relaxed">
