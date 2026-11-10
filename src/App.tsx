@@ -482,7 +482,7 @@ export default function App() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8 text-xs uppercase font-medium tracking-widest text-[#A0A0AA]">
             <a href="#story" className="hover:text-[#E89A3C] transition-colors">The Vaada</a>
-            <a href="#founder" className="hover:text-[#E89A3C] transition-colors">About Rajat</a>
+            <a href="#founder" className="hover:text-[#E89A3C] transition-colors">About Team</a>
             <a href="#bts" className="hover:text-[#E89A3C] transition-colors">Behind The Lens</a>
             <a href="#craft" className="hover:text-[#E89A3C] transition-colors">Rig & Craft</a>
             <a href="#packages" className="hover:text-[#E89A3C] transition-colors">Packages</a>
@@ -1143,7 +1143,7 @@ export default function App() {
 
           <div className="flex items-center gap-6">
             <a href="#story" className="hover:text-white transition-colors">Manifesto</a>
-            <a href="#founder" className="hover:text-white transition-colors">About Rajat</a>
+            <a href="#founder" className="hover:text-white transition-colors">About Team</a>
             <a href="#bts" className="hover:text-white transition-colors">Behind The Lens</a>
             <a href="#packages" className="hover:text-white transition-colors">Pricing</a>
           </div>
