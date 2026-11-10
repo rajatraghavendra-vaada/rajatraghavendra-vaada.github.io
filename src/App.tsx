@@ -793,7 +793,7 @@ export default function App() {
                     <span>The Production Arsenal</span>
                   </div>
                   <p className="text-xs text-[#8A8A96] leading-relaxed">
-                    Powered by a dedicated <strong>Canon EOS 200D Mark II</strong>, a mechanically balanced <strong>DJI RS 3 Mini 3-axis gimbal</strong>, and high-fidelity directional audio for clean run-and-gun motion.
+                    Powered by dedicated <strong>Canon EOS 200D Mark II</strong> and <strong>Sony ZV-E10</strong> cameras, a mechanically balanced <strong>DJI RS 3 Mini 3-axis gimbal</strong>, and high-fidelity directional audio for clean run-and-gun motion.
                   </p>
                 </div>
 
