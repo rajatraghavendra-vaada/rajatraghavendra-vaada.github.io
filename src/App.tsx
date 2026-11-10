@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import {
   Film,
   Camera,
@@ -257,6 +257,135 @@ const PACKAGES = [
     ]
   }
 ];
+
+const TEAM = [
+  {
+    id: "team-1",
+    name: "Aastha Singh",
+    role: "Video Editor",
+    badge: "EDITOR",
+    pill: "THE EDITOR",
+    headline: "Finding the story in the smallest of moments.",
+    image: "/team/aastha.jpeg",
+    bio: [
+      "I see video editing as more than just putting clips together; it’s about finding a story in the smallest of moments and bringing it to life. I love experimenting with visuals, transitions, rhythm, and storytelling to turn raw footage into something engaging and memorable.",
+      "I’m someone who enjoys exploring ideas, thinking creatively, and constantly learning something new with every project. For me, every edit is an opportunity to tell a story differently.",
+    ],
+  },
+  {
+    id: "team-2",
+    name: "Nafeesa Saleh",
+    role: "Brand Manager",
+    badge: "BRAND MANAGER",
+    pill: "THE BRAND MANAGER",
+    headline: "Where critical thinking meets creative storytelling.",
+    image: "/team/brand-manager.jpeg",
+    bio: [
+      "I’ve always been drawn to spaces where critical thinking meets creative storytelling. As Brand Manager, my focus is turning brand identity into compelling, consistent digital presence.",
+      "From scripting and creative oversight to aligning fast-moving production teams and publishing workflows, I manage the moving parts that take an idea from raw concept to finished, high-impact content. I bring structured execution, sharp audience awareness, and an obsessive eye for detail to every brand partner we scale.",
+    ],
+  },
+];
+
+function TeamSlide({ m }) {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="lg:col-span-5 relative">
+        <div className="relative rounded-3xl overflow-hidden bg-[#13131A] border border-[#2B2B3A] p-4 sm:p-5 shadow-2xl group">
+          <div className="relative w-full h-[480px] sm:h-[540px] rounded-2xl overflow-hidden bg-[#0A0A0E] border border-[#22222E]">
+            <img
+              src={m.image}
+              alt={m.name + " - " + m.role}
+              loading="lazy"
+              className="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-700 block"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0E] via-transparent to-transparent opacity-80 pointer-events-none" />
+            <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-[10px] font-mono text-[#FBBF24]">
+              <Crosshair className="w-3 h-3 text-[#E89A3C]" />
+              <span>{m.badge}</span>
+            </div>
+            <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-black/85 backdrop-blur-md border border-white/10">
+              <h4 className="text-base font-bold text-white tracking-wide">{m.name}</h4>
+              <span className="text-xs text-[#E89A3C] font-mono block mt-0.5">{m.role}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="lg:col-span-7 space-y-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#E89A3C]/10 border border-[#E89A3C]/20 text-xs font-mono text-[#E89A3C]">
+          <span>{m.pill}</span>
+        </div>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">{m.headline}</h2>
+        {m.bio.map((p, i) => (
+          <p key={i} className="text-sm sm:text-base text-[#A1A1AA] leading-relaxed">{p}</p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TeamSwipe({ slides, labels }) {
+  const trackRef = useRef(null);
+  const [index, setIndex] = useState(0);
+
+  const goTo = (i) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const next = Math.max(0, Math.min(slides.length - 1, i));
+    el.scrollTo({ left: next * el.clientWidth, behavior: "smooth" });
+  };
+
+  const onScroll = () => {
+    const el = trackRef.current;
+    if (!el) return;
+    setIndex(Math.round(el.scrollLeft / el.clientWidth));
+  };
+
+  return (
+    <div>
+      <div
+        ref={trackRef}
+        onScroll={onScroll}
+        className="flex items-center overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {slides.map((sl, i) => (
+          <div key={i} className="shrink-0 w-full snap-center">{sl}</div>
+        ))}
+      </div>
+      {slides.length > 1 && (
+        <div className="mt-10 flex items-center justify-center gap-4">
+          <button
+            type="button"
+            aria-label="Previous"
+            onClick={() => goTo(index - 1)}
+            className="p-2.5 rounded-full bg-[#181822] border border-[#2B2B38] text-white hover:border-[#E89A3C] transition-colors"
+          >
+            <ArrowRight className="w-4 h-4 rotate-180" />
+          </button>
+          <div className="flex gap-2">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={"Go to " + labels[i]}
+                onClick={() => goTo(i)}
+                className={"h-2 rounded-full transition-all " + (i === index ? "w-6 bg-[#E89A3C]" : "w-2 bg-[#3A3A48]")}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            aria-label="Next"
+            onClick={() => goTo(index + 1)}
+            className="p-2.5 rounded-full bg-[#181822] border border-[#2B2B38] text-white hover:border-[#E89A3C] transition-colors"
+          >
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -574,7 +703,10 @@ export default function App() {
       {/* ---------------- ABOUT THE FOUNDER SECTION ---------------- */}
       <section id="founder" className="relative z-10 py-24 bg-[#09090D] border-b border-[#1C1C24]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <TeamSwipe
+            labels={["Founder", ...TEAM.map((m) => m.name)]}
+            slides={[
+<div key="founder-slide" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Visual Profile Column with Real Founder Image */}
             <div className="lg:col-span-5 relative">
@@ -678,7 +810,10 @@ export default function App() {
 
             </div>
 
-          </div>
+          </div>,
+              ...TEAM.map((m) => <TeamSlide key={m.id} m={m} />),
+            ]}
+          />
         </div>
       </section>
 
