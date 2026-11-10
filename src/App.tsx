@@ -279,7 +279,7 @@ const TEAM = [
     badge: "BRAND MANAGER",
     pill: "THE BRAND MANAGER",
     headline: "Where critical thinking meets creative storytelling.",
-    image: "/team/brand-manager.jpeg",
+    image: "/team/brand-manager-new.jpeg",
     bio: [
       "I’ve always been drawn to spaces where critical thinking meets creative storytelling. As Brand Manager, my focus is turning brand identity into compelling, consistent digital presence.",
       "From scripting and creative oversight to aligning fast-moving production teams and publishing workflows, I manage the moving parts that take an idea from raw concept to finished, high-impact content. I bring structured execution, sharp audience awareness, and an obsessive eye for detail to every brand partner we scale.",
