@@ -547,8 +547,6 @@ export default function App() {
             <span className="text-[#E6E6EB] font-sans font-medium">वादा • Commitment Over Talk</span>
             <span className="text-[#52525C]">•</span>
             <span>Bengaluru HQ</span>
-            <span className="text-[#52525C]">•</span>
-            <span>Canon 200D II & DJI RS 3 Mini Rig</span>
           </div>
 
           {/* Main Headline */}
