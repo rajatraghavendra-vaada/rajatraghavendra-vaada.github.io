@@ -298,6 +298,20 @@ const TEAM = [
       "From late-afternoon cafe scouting to architecting custom content retainers, my mission is simple: bring high-potential brands into our creative orbit and build partnerships that turn passive scrollers into genuine brand believers.",
     ],
   },
+  {
+    id: "team-4",
+    name: "Asmi Baghel",
+    role: "Video Editor",
+    badge: "EDITOR",
+    pill: "THE EDITOR",
+    headline: "Finding peace in watching things come to life.",
+    image: "/team/asmi.jpeg",
+    bio: [
+      "I’ve always found a certain kind of peace in watching things come to life. It began with me just recording my mother looking after her plants, purely because I loved the idea of preserving little moments. That evolved into me actually making videos. There’s a real sense of tranquillity in watching something come to life, be it a pastry, the way a pastry takes shape, the way the layers of a cake absorb the coffee or the milk and all the little bits of artistry that go into it. I just love the little details and I love the way you can turn them into a visual that actually makes someone else feel something.",
+      "I’m just as fascinated by the beauty of the process as I am by the end result. The sheer elegance of the hands at work, the precision required to get the layers right, the sheen of a freshly glazed pastry, the little flaws that give it that ‘handmade’ feel. There’s a real sense of magic in watching such simple things become so complex and beautiful. I could watch it for ages. There’s a story in every piece, as much as there is in the finished article, and you really do have to see the process to appreciate it.",
+      "And that’s what I love about editing really. It’s my way of holding on to the moments, playing with the angles, finding the right frame, putting the little bits together and giving them a sense of rhythm. I love making something that looks good but which will make you stop and think, make you feel something, and perhaps in that way you’ll come to appreciate the art of it a little more.",
+    ],
+  },
 ];
 
 function TeamSlide({ m }) {
