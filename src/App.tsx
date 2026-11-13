@@ -1172,6 +1172,7 @@ export default function App() {
             <a href="#founder" className="hover:text-white transition-colors">About Team</a>
             <a href="#bts" className="hover:text-white transition-colors">Behind The Lens</a>
             <a href="#packages" className="hover:text-white transition-colors">Pricing</a>
+            <a href="https://www.instagram.com/vaadaproductions.in/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E89A3C] transition-colors">Instagram</a>
           </div>
 
 
