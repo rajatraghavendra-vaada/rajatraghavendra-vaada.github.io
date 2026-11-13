@@ -207,36 +207,36 @@ const BTS_GALLERY = [
 const PACKAGES = [
   {
     id: "pkg-1",
-    name: "Founder Brand Sprint",
-    tagline: "Organic Authority & Founder Voice",
-    badge: "Founder Essential",
-    priceDisplay: "₹50,000",
+    name: "Starter Slice",
+    tagline: "High-Impact Visuals to Get Started",
+    badge: "Brand Essential",
+    priceDisplay: "₹25,000",
     pricePeriod: "/ month",
-    pricingNote: "4 High-Impact Reels / Month + 1 Carousel",
-    idealFor: "Cafes, specialty bakehouses, and hospitality spots looking for high-impact, short-format content to establish an undeniable local brand presence and drive footfall.",
+    pricingNote: "2 High-Retention Reels / Month + 2 Carousels",
+    idealFor: "Cafes and specialty bakehouses testing the waters with professional, short-format cinematic content to establish an undeniable local brand presence.",
     features: [
-      "4x High-Retention Reels per month",
+      "2x High-Retention Reels per month",
+      "2x Coordinated High-Value Carousel Designs",
       "Concept Direction & End-to-End Script Ideation",
       "Dynamic 3-Axis Gimbal Kinetic Movement & Framing",
-      "Custom Kinetic Captions, Sound Design & Editing",
       "Engineered First-3-Second Thumb-Stop Hooks"
     ]
   },
   {
     id: "pkg-2",
-    name: "Product Launch Cut",
-    tagline: "High-Cadence Launch Drops & Events",
-    badge: "Milestone & Demo Days",
-    priceDisplay: "Demand Based",
-    pricePeriod: "custom quote",
-    pricingNote: "Tailored to event scale & launch complexity",
-    idealFor: "Special product launches, exclusive drops, experiential pop-ups, and live brand events that require end-to-end coverage.",
+    name: "Founder Brand Sprint",
+    tagline: "Organic Authority & Consistent Presence",
+    badge: "Founder Essential",
+    priceDisplay: "₹50,000",
+    pricePeriod: "/ month",
+    pricingNote: "8 High-Impact Reels / Month (2 Weekly Drops)",
+    idealFor: "Cafes, specialty bakehouses, and hospitality spots looking for high-frequency, short-format cinematic content to build authority and aggressively drive footfall.",
     features: [
-      "Launch Showcase Reel (4K, 16:9 or 9:16)",
-      "Dedicated On-Site Event & Product Filming",
-      "Macro Detailing, Product Textures & Dynamic B-Roll",
-      "Event/Product Theme-Based Editing",
-      "First-3-Second Thumb-Stop Hook"
+      "8x High-Retention Reels per month (2 weekly drops)",
+      "Concept Direction & End-to-End Script Ideation",
+      "Dedicated Monthly Shooting Sessions",
+      "Custom Kinetic Captions, Sound Design & Editing",
+      "Engineered First-3-Second Thumb-Stop Hooks"
     ]
   },
   {
@@ -244,15 +244,16 @@ const PACKAGES = [
     name: "Full Narrative Suite",
     tagline: "The Complete Monthly Content Engine",
     badge: "Most Comprehensive",
-    priceDisplay: "₹1,20,000",
+    priceDisplay: "₹1,00,000",
     pricePeriod: "/ month",
-    pricingNote: "2 Reels Weekly (8-10 Reels/Mo) + 4 Carousels",
-    idealFor: "Cafes, restaurants, and hospitality brands looking for consistent, end-to-end social media content management without the overhead of hiring an in-house media team.",
+    pricingNote: "12 High-Production Reels / Month + 4 Carousels",
+    idealFor: "Cafes, restaurants, and hospitality brands looking for an aggressive, end-to-end social media content engine without the overhead of hiring an in-house media team.",
     features: [
-      "8 to 10 High-Production Reels per month (2 weekly drops)",
-      "Coordinated High-Value Carousel Designs & Slide Creatives",
+      "12x High-Production Reels per month (3 weekly drops)",
+      "4x Coordinated High-Value Carousel Designs & Slide Creatives",
       "End-to-End Content Strategy, Topic Research & Scripts",
-      "Dedicated Monthly Shooting Sessions",
+      "Dedicated Monthly Shooting Sessions (Up to 3 Days)",
+      "Macro Detailing, Product Textures & Dynamic B-Roll",
       "Uncut Raw Photo Access: full set of raw pictures provided for your flexible, everyday use"
     ]
   }
@@ -426,7 +427,7 @@ export default function App() {
     founderName: "",
     companyName: "",
     email: "",
-    selectedPkg: "Founder Brand Sprint (₹50,000)",
+    selectedPkg: "Starter Slice (₹25,000)",
     location: "Bengaluru (In-Person)",
     brief: ""
   });
@@ -1410,9 +1411,10 @@ export default function App() {
                     onChange={(e) => setBookingForm({ ...bookingForm, selectedPkg: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#09090D] border border-[#232330] text-white focus:outline-none focus:border-[#E89A3C]"
                   >
-                    <option value="Founder Brand Sprint (₹50,000)">Founder Brand Sprint (4 Reels - ₹50,000 / mo)</option>
-                    <option value="Product Launch Cut (Demand Based)">Product Launch Cut (Demand Based / Custom)</option>
-                    <option value="Full Narrative Suite (₹1,20,000)">Full Narrative Suite (2 Reels/wk + Carousels - ₹1,20,000 / mo)</option>
+                    <option value="Starter Slice (₹25,000)">Starter Slice (2 Reels + 2 Carousels - ₹25,000 / mo)</option>
+                  <option value="Founder Brand Sprint (₹50,000)">Founder Brand Sprint (8 Reels - ₹50,000 / mo)</option>
+                    
+                    <option value="Full Narrative Suite (₹1,00,000)">Full Narrative Suite (12 Reels + 4 Carousels - ₹1,00,000 / mo)</option>
                     <option value="Custom Event / Milestone">Custom Milestone / Event Scope</option>
                   </select>
                 </div>
