@@ -569,7 +569,10 @@ export default function App() {
           {/* Action CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => setShowBookingModal(true)}
+              onClick={() => {
+            const pkgEl = document.getElementById("packages");
+            pkgEl?.scrollIntoView({ behavior: "smooth" });
+          }}
               className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[#E89A3C] via-[#F59E0B] to-[#D97706] text-[#0A0A0D] font-bold text-sm uppercase tracking-wider shadow-xl shadow-[#E89A3C]/20 hover:shadow-[#E89A3C]/35 hover:scale-[1.02] active:scale-[0.99] transition-all flex items-center justify-center gap-3"
             >
               <Sparkles className="w-4 h-4 text-[#0A0A0D]" />
